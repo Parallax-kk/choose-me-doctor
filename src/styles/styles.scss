@@ -1,0 +1,12 @@
+$success: #7952b3;
+
+@use "bootstrap/scss/bootstrap.scss";
+
+body {
+  padding: 1.5rem;
+}
+
+.table-custom th {
+  min-width: 50px;
+  font-size: 0.9rem;
+}
