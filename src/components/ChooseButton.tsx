@@ -36,6 +36,10 @@ export default function ChooseButton({ initialHope, rankHopeCosts, selectedClass
                 return hopeCost <= currentHope;
             });
 
+            candidates = candidates.filter((op) => {
+                return !operators.some((selectedOp) => selectedOp.name === op.name);
+            });
+
             if (candidates.length === 0) {
                 console.error(`currentHope ${currentHope} でクラス ${classType} のオペレーターが選べませんでした`);
                 return;

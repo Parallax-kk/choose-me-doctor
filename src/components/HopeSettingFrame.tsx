@@ -23,7 +23,7 @@ const RankDropdown = ({ label, value, onChange }: RankDropdownProps) => {
     <InputGroup>
       <InputGroup.Text>{label}</InputGroup.Text>
       <DropdownButton id={`dropdown-${label}`} title={value.toString()} onSelect={handleSelect}>
-        {[...Array(11).keys()].map((num) => (
+        {[...Array(10).keys()].map((num) => (
           <Dropdown.Item eventKey={num.toString()} key={num}>
             {num}
           </Dropdown.Item>
@@ -85,14 +85,14 @@ export default function HopeSettingFrame({ setInitialHope, setHopeCosts }: HopeS
       <h5>消費希望</h5>
       <div
         style={{
-          display: "flex",  // Flexboxを使用して横並びに
-          flexDirection: "row", // 横並び
-          gap: "10px",  // ドロップダウン間の間隔
-          justifyContent: "space-between",  // 横並びで間隔を均等に
+          display: "flex",
+          flexDirection: "row",
+          gap: "10px",
+          justifyContent: "space-between",
         }}
       >
         {["★1", "★2", "★3", "★4", "★5", "★6"].map((label, i) => (
-          <div style={{ width: "100px" }} key={label}>  {/* 幅を固定 */}
+          <div style={{ width: "100px" }} key={label}>
             <RankDropdown
               key={label}
               label={label}
