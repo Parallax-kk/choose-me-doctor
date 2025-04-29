@@ -28,7 +28,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Container as="main" className="py-4 px-3 mx-auto" style={{ minWidth: "800px", maxWidth: "800px" }}>
+      <Container as="main" className="py-4 px-3 mx-auto" style={{ minWidth: "400px", maxWidth: "400px" }}>
         <Header />
         <HopeSetting
           setInitialHope={setInitialHope}

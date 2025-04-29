@@ -91,16 +91,64 @@ export default function HopeSettingFrame({ setInitialHope, setHopeCosts }: HopeS
           justifyContent: "space-between",
         }}
       >
-        {["★1", "★2", "★3", "★4", "★5", "★6"].map((label, i) => (
-          <div style={{ width: "100px" }} key={label}>
-            <RankDropdown
-              key={label}
-              label={label}
-              value={hopeCosts[i]}
-              onChange={(val) => handleHopeCostChange(i, val)}
-            />
-          </div>
-        ))}
+        <Table bordered size="sm" style={{ tableLayout: "auto", width: "auto" }}>
+          <thead>
+            <tr>
+              <th >
+                <RankDropdown
+                  key={"★1"}
+                  label={"★1"}
+                  value={hopeCosts[0]}
+                  onChange={(val) => handleHopeCostChange(0, val)}
+                />
+              </th>
+              <th >
+                <RankDropdown
+                  key={"★2"}
+                  label={"★2"}
+                  value={hopeCosts[1]}
+                  onChange={(val) => handleHopeCostChange(1, val)}
+                />
+              </th>
+              <th >
+                <RankDropdown
+                  key={"★3"}
+                  label={"★3"}
+                  value={hopeCosts[2]}
+                  onChange={(val) => handleHopeCostChange(2, val)}
+                />
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <RankDropdown
+                  key={"★4"}
+                  label={"★4"}
+                  value={hopeCosts[3]}
+                  onChange={(val) => handleHopeCostChange(3, val)}
+                />
+              </td>
+              <td>
+                <RankDropdown
+                  key={"★5"}
+                  label={"★5"}
+                  value={hopeCosts[4]}
+                  onChange={(val) => handleHopeCostChange(4, val)}
+                />
+              </td>
+              <td>
+                <RankDropdown
+                  key={"★6"}
+                  label={"★6"}
+                  value={hopeCosts[5]}
+                  onChange={(val) => handleHopeCostChange(5, val)}
+                />
+              </td>
+            </tr>
+          </tbody>
+        </Table>
       </div>
       <div >
         <Table bordered size="sm" style={{
