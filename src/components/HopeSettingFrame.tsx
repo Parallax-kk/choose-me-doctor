@@ -89,9 +89,8 @@ export default function HopeSettingFrame({ setInitialHope, setHopeCosts }: HopeS
           flexDirection: "row",
           gap: "10px",
           justifyContent: "space-between",
-        }}
-      >
-        <Table bordered size="sm" style={{ tableLayout: "auto", width: "auto" }}>
+        }}>
+        <Table borderless={true} style={{ tableLayout: "auto", width: "auto" }}>
           <thead>
             <tr>
               <th >
